@@ -45,3 +45,11 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## My experience
+
+I have to say that I am impressed with Astro's out-of-the-box experience.
+* `bun create astro@latest` had some cool animation.
+* `--template minimal` really is. I didn't have to rip out any cruft.
+* `.gitignore` is just right.
+

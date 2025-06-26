@@ -1,5 +1,9 @@
 # build output
 dist/
+
+# Jujutsu repo
+.jj/
+
 # generated types
 .astro/
 
