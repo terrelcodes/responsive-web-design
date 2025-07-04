@@ -1,0 +1,165 @@
+---
+
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>003 - Responsive Web Design</title>
+    </head>
+    <body>
+        <main>  
+            <header>
+                <h1>
+                    Compound selectors can be useful
+                </h1>
+            </header>
+        <section class="one">
+            <h2>
+                Section 1
+            </h2>
+            
+            <p>
+                Netus et malesuada fames ac. <a href="/002/"
+                    >Sed cras ornare arcu dui vivamus</a
+                >. <strong>Elementum integer enim</strong> neque volutpat ac tincidunt
+                vitae semper.
+            </p>
+            <p class="links">
+                <a class="button" href="/">contact me</a>
+                <a class="button" href="/002/">learn more about me</a>
+            </p>
+        </section>
+        <section class="two">
+            <h2>
+               Section 2
+            </h2>
+            
+            <p>
+                Netus et malesuada fames ac. <a href="/002/"
+                    >Sed cras ornare arcu dui vivamus</a
+                >. <strong>Elementum integer enim</strong> neque volutpat ac tincidunt
+                vitae semper.
+            </p>
+            <p class="links">
+                <a class="button" href="/">contact me</a>
+                <a class="button" href="/002/">learn more about me</a>
+            </p>
+        </article></main>
+    </body>
+</html>
+<style is:global>
+    :root {
+    --color-primary: hsl(0, 50%, 10%);
+    --color-secondary: hsl(0, 50%, 95%);
+    --color-tertiary: #ffe600;
+    font-family: 'Inter', sans-serif;   
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+* {
+    box-sizing: border-box;
+}
+main {
+    width: 560px;
+    margin-inline: auto;
+}
+header {
+    text-align: center;
+    color: var(--color-primary);
+    background-color: var(--color-tertiary);
+}
+.one {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+}
+section,header {
+    padding: 2rem;
+    border: 1px solid var(--color-primary);
+}
+
+.card>* {
+    margin-block: 0;
+}
+
+.card>*+* {
+    margin-block-start: 1em;
+}
+
+.card>.links {
+    margin-block-start: 3em;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+h3 {
+    font-size: 1.25rem;
+}
+h1 span {
+    color: var(--color-tertiary);
+}
+a {
+    color: var(--color-tertiary);
+    font-weight: 500;
+}
+a:hover {
+    color: var(--color-secondary);
+}
+.links {
+    display: flex;
+    gap: 1em;
+}
+.two {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+.two a, .two strong {
+    color: var(--color-primary);
+}
+.two .button {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+}
+.two .button:hover, .two .button:focus {
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: 0.25em;
+    text-align: center;
+    cursor: pointer;
+}
+.button:hover, .button:focus {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+strong {
+    color: var(--color-tertiary);
+}
+p {
+    font-size: 18px;
+}
+</style>
