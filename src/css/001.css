@@ -1,6 +1,17 @@
+:root {
+    --color-primary: hsl(0, 50%, 10%);
+    --color-secondary: hsl(0, 50%, 95%);
+    --color-tertiary: #ffe600;
+    font-family: 'Inter', sans-serif;   
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
 .card {
-    background: #000;
-    color: white;
+    background: var(--color-primary);
+    color: var(--color-secondary);
     width: 560px;
     margin-inline: auto;
     padding: 3rem;
@@ -18,17 +29,23 @@
     margin-block-start: 3em;
 }
 
-.card>.links>a {
-    color: inherit;
-}
+
 
 h1 {
     font-size: 24px;
 }
 h1 span {
-    color: yellow;
+    color: var(--color-tertiary);
 }
-
+a {
+    color: var(--color-tertiary);
+}
+a:hover {
+    color: var(--color-secondary);
+}
+strong {
+    color: var(--color-tertiary);
+}
 p {
     font-size: 18px;
 }
