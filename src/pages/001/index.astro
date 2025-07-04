@@ -29,8 +29,8 @@
                 vitae semper.
             </p>
             <p class="links">
-                <a href="#">contact me</a>
-                <a href="#">learn more about me</a>
+                <a class="button" href="/">contact me</a>
+                <a class="button" href="/002/">learn more about me</a>
             </p>
         </div>
     </body>
@@ -79,6 +79,25 @@ a {
 a:hover {
     color: var(--color-secondary);
 }
+.links {
+    display: flex;
+    gap: 1em;
+}
+.button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: 0.25em;
+    text-align: center;
+    cursor: pointer;
+}
+.button:hover, .button:focus {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
 strong {
     color: var(--color-tertiary);
 }
