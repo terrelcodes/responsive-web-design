@@ -1,0 +1,99 @@
+---
+
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>002 - Responsive Web Design</title>
+    </head>
+    <body>
+        <h1>An awesome blog</h1>
+        <article>
+            <h2>An awesome blog post</h2>
+            <p class="frame"><img src="/images/002.webp" alt="A beautiful image" /></p>
+            <p>
+                At vero eos et <a href="/">accusam et justo duo</a> dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+                dolor sit amet.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Netus
+                et malesuada fames ac. <a href="/001/">Sed cras ornare</a> arcu dui vivamus.
+                Elementum integer enim neque volutpat ac tincidunt vitae semper.
+            </p>
+
+            <p class="links"><a href="/003/">Read more...</a></p>
+        </article>
+    </body>
+</html>
+<style is:global>
+    :root {
+        --color-white: #fff;
+        --color-black: #000;
+        --color-primary: #2e7ad3;
+        --color-secondary: #104c90;
+        --color-tertiary: #ff8000;
+        --color-quaternary: #f1f1f1;
+
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--color-primary);
+        background-color: var(--color-white);
+    }
+
+    article {
+        background: var(--color-quaternary );
+        color: var(--color-black);
+        width: 500px;
+        margin-inline: auto;
+        padding: 1rem;
+    }
+
+    article > * {
+        margin-block: 0;
+    }
+
+    article > * + * {
+        margin-block-start: 1em;
+    }
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    h1 span {
+        color: var(--color-tertiary);
+    }
+    h2 {
+        font-size: 2rem;
+        color: var(--color-secondary);
+    }
+    a {
+        color: var(--color-tertiary);
+    }
+    a:hover,a:focus {
+        color: var(--color-secondary);
+    }
+    .frame {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        overflow: hidden;
+        margin-block-end: 1.5rem;
+    }
+    .frame img {
+        display: block;
+        width: 100%;
+    }
+</style>
