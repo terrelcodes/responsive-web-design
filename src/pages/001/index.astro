@@ -13,7 +13,6 @@
             href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="/src/css/001.css" />
         <title>001 - Responsive Web Design</title>
     </head>
     <body>
@@ -35,3 +34,56 @@
         </div>
     </body>
 </html>
+<style is:global>
+    :root {
+    --color-primary: hsl(0, 50%, 10%);
+    --color-secondary: hsl(0, 50%, 95%);
+    --color-tertiary: #ffe600;
+    font-family: 'Inter', sans-serif;   
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+.card {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    width: 560px;
+    margin-inline: auto;
+    padding: 3rem;
+}
+
+.card>* {
+    margin-block: 0;
+}
+
+.card>*+* {
+    margin-block-start: 1em;
+}
+
+.card>.links {
+    margin-block-start: 3em;
+}
+
+
+
+h1 {
+    font-size: 24px;
+}
+h1 span {
+    color: var(--color-tertiary);
+}
+a {
+    color: var(--color-tertiary);
+}
+a:hover {
+    color: var(--color-secondary);
+}
+strong {
+    color: var(--color-tertiary);
+}
+p {
+    font-size: 18px;
+}
+</style>
