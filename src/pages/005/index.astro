@@ -1,0 +1,194 @@
+---
+
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>004 - Responsive Web Design</title>
+    </head>
+    <body class="dark">
+        <main>
+            <header class="flow">
+                <h1>CSS is a lot of fun</h1>
+            </header>
+            <section class="light">
+                <div class="flow">
+                    <h2>Section One Title.</h2>
+                    <img src="/images/boardwalk.png" alt="Boardwalk" />
+                    <p>
+                        Netus et malesuada fames ac. <a href="/"
+                            >Sed cras ornare arcu</a
+                        > dui vivamus. <strong
+                            >Elementum integer enim neque</strong
+                        > volutpat ac tincidunt vitae semper.
+                    </p>
+                    <p>
+                        16. Shall a man and a woman heap to themselves riches and costly
+                        things to hedge up the wilderness? And with such a hedge, shall
+                        they think to bring safety unto themselves and their children? I
+                        ask you, does their rich and costly things protect them from any
+                        risk or peril? In the day of tribulation, what shall their
+                        riches buy them? When the earth has thrown down the crop, shall
+                        they buy meal? When the fire has burned the city, shall they buy
+                        shelter? I say unto you, Nay. For the day of their salvation is
+                        at hand.
+                    </p>
+                    <p>
+                        17. And shall a man abuse his neighbor, and make a slave of him,
+                        and beat him, and cast him into a prison, and feel secure in his
+                        standing? Or shall he by usury make his neighbor his slave, and
+                        the day of tribulation coming, still ask of him his succor?
+                        Shall a man heap up houses to let and oxen to hire and, setting
+                        a yoke upon his neighbor, expect them to come to his aid in the
+                        midst of his adversity? Is it possible that adversity should
+                        come to him alone? And shall he believe that any that he has
+                        abused shall not also suffer the tribulation, and yet feel some
+                        loyalty and charity toward him? It shall not be.
+                    </p>
+                    <p>
+                        One morning, when Gregor Samsa woke from troubled dreams, he
+                        found himself transformed in his bed into a horrible vermin. He
+                        lay on his armour-like back, and if he lifted his head a little
+                        he could see his brown belly, slightly domed and divided by
+                        arches into stiff sections. The bedding was hardly able to cover
+                        it and seemed ready to slide off any moment. His many legs,
+                        pitifully thin compared with the size of the rest of him, waved
+                        about helplessly as he looked.
+                    </p>
+                    <p>
+                        In a hole in the ground there lived a hobbit. Not a nasty,
+                        dirty, wet hole, filled with the ends of worms and an oozy
+                        smell, nor yet a dry, bare, sandy hole with nothing in it to sit
+                        down on or to eat: it was a hobbit-hole, and that means comfort.
+                    </p>
+                </div>
+            </section>
+            <section class="flow">
+                <h2>Section Two Title.</h2>
+                <p>
+                    Netus et malesuada fames ac. Sed cras ornare arcu dui
+                    vivamus. Elementum integer enim neque volutpat ac tincidunt
+                    vitae semper.
+                </p>
+                <p>
+                    Lorem <a href="/">ipsum dolor sit amet</a>, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt
+                    <strong>ut labore et dolore</strong> magna aliquyam erat, sed
+                    diam voluptua.
+                </p>
+                <p class="links">
+                    <a class="button btn-primary" href="/">contact us</a>
+                    <a class="button btn-secondary" href="/">more info</a>
+                </p>
+            </section>
+        </main>
+    </body>
+</html>
+<style is:global>
+    :root {
+        --color-light: white;
+        --color-dark: #2e354f;
+        --color-accent: #ef5839;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .light {
+        color: var(--color-dark);
+        background-color: var(--color-light);
+    }
+    .dark {
+        color: var(--color-light);
+        background-color: var(--color-dark);
+    }
+    h2,
+    a {
+        color: var(--color-accent);
+    }
+    h1,
+    h2,
+    strong {
+        font-weight: 900;
+    }
+    h1 {
+        font-size: 2.25rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    body {
+        margin: 0;
+        font-size: 1.125rem;
+    }
+    main {
+        margin: 0;
+    }
+    .flow {
+        padding: 2rem;
+        margin: 0 auto;
+        width: clamp(20rem, 60vw, 40rem);
+    }
+    .flow > img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .flow > * {
+        margin-block: 0;
+    }
+
+    .flow > * + * {
+        margin-block-start: 1em;
+    }
+
+    .flow > .links {
+        margin-block-start: 3em;
+    }
+
+    a {
+        font-weight: 500;
+    }
+    a:hover {
+        color: var(--color-secondary);
+    }
+    .links {
+        display: flex;
+        gap: 1em;
+    }
+    .button {
+        display: inline-block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        border-radius: 0.25em;
+        text-align: center;
+        cursor: pointer;
+    }
+    .btn-primary {
+        background-color: var(--color-accent);
+        color: var(--color-light);
+    }
+    .btn-secondary {
+        background-color: var(--color-light);
+        color: var(--color-dark);
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: var(--color-light);
+        color: var(--color-accent);
+    }
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+        background-color: var(--color-accent);
+        color: var(--color-light);
+    }
+</style>

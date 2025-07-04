@@ -1,0 +1,79 @@
+---
+
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>102 - Responsive Web Design</title>
+    </head>
+    <body>
+        <main class="parent">
+            <aside class="child"><p>  In a hole in the ground there lived a hobbit.
+                Not a nasty, dirty, wet hole, filled with the ends of worms and an
+                oozy smell, nor yet a dry, bare, sandy hole with nothing in it to
+                sit down on or to eat: it was a hobbit-hole, and that means
+                comfort.</p>
+            </aside><section class="child">
+                <p>16. Shall a man and a woman heap to themselves riches and costly things to hedge up the wilderness?  
+                And with such a hedge, shall they think to bring safety unto themselves and their children?  I ask you, does their rich and costly things protect them from any risk or peril?  In the day of tribulation, what shall their riches buy them?  When the earth has thrown down the crop, shall they buy meal?  When the fire has burned the city, shall they buy shelter?  I say unto you, Nay.  For the day of their salvation is at hand.</p>
+                <p>17. And shall a man abuse his neighbor, and make a slave of him, and beat him, and cast him into a 
+                prison, and feel secure in his standing?  Or shall he by usury make his neighbor his slave, and the day of 
+                tribulation coming, still ask of him his succor?  Shall a man heap up houses to let and oxen to hire and, 
+                setting a yoke upon his neighbor, expect them to come to his aid in the midst of his adversity?  Is it possible that adversity should come to him alone?  And shall he believe that any that he has abused shall not also suffer the tribulation, and yet feel some loyalty and charity toward him?  It shall not be.</p>  
+            
+                <p>
+                One morning, when Gregor Samsa woke from troubled dreams, he found
+himself transformed in his bed into a horrible vermin.  He lay on
+his armour-like back, and if he lifted his head a little he could
+see his brown belly, slightly domed and divided by arches into stiff
+sections.  The bedding was hardly able to cover it and seemed ready
+to slide off any moment.  His many legs, pitifully thin compared
+with the size of the rest of him, waved about helplessly as he looked.
+</p>
+            </section>
+        </main>
+    </body>
+</html>
+<style is:global>
+    :root {
+    --color-primary: hsl(0, 50%, 10%);
+    --color-secondary: hsl(0, 50%, 95%);
+    --color-tertiary: hsl(140, 50%, 80%);
+    font-family: 'Inter', sans-serif;   
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+body {
+    margin: 0;
+}
+.parent {  
+    margin: 0;
+    display: grid;
+    grid-template-columns: minmax(30ch, 25%) 1fr;
+}
+.child:nth-child(1) {
+    background-color: var(--color-secondary);
+    padding: 1rem;
+}
+.child:nth-child(2) {
+    background-color: var(--color-tertiary);
+    padding: 1rem;
+}
+.child> * {
+    margin: 0;
+}
+.child> *+* {
+    margin-top: 1rem;
+}
+</style>

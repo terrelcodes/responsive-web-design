@@ -1,0 +1,52 @@
+---
+
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>109 - Responsive Web Design</title>
+    </head>
+    <body>
+        <main class="parent">
+            <p class="child" contenteditable="true">
+                Nisl suscipit <span>adipiscing bibendum</span> est ultricies integer
+                quis auctor.
+            </h1>
+        </main>
+    </body>
+</html>
+<style is:global>
+    :root {
+    --color-primary: hsl(0, 50%, 10%);
+    --color-secondary: hsl(0, 50%, 95%);
+    --color-tertiary: #ffe600;
+    font-family: 'Inter', sans-serif;   
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+body {
+    margin: 0;
+}
+.parent {  
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+}
+.child {
+    width: clamp(23ch, 50%, 46ch);
+    background-color: var(--color-tertiary);
+}
+
+</style>

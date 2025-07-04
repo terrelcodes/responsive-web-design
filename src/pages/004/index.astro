@@ -1,0 +1,156 @@
+---
+
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <title>004 - Responsive Web Design</title>
+    </head>
+    <body class="dark">
+        <main>
+            <header class="flow">
+                <h1>CSS is a lot of fun</h1>
+            </header>
+            <section class="light">
+                <div class="flow">
+                    <h2>Section One Title.</h2>
+                    <img src="/images/boardwalk.png" alt="Boardwalk" />
+                    <p>
+                        Netus et malesuada fames ac. <a href="/"
+                            >Sed cras ornare arcu</a
+                        > dui vivamus. <strong
+                            >Elementum integer enim neque</strong
+                        > volutpat ac tincidunt vitae semper.
+                    </p>
+                </div>
+            </section>
+            <section class="flow">
+                <h2>Section Two Title.</h2>
+                <p>
+                    Netus et malesuada fames ac. Sed cras ornare arcu dui
+                    vivamus. Elementum integer enim neque volutpat ac tincidunt
+                    vitae semper.
+                </p>
+                <p>
+                    Lorem <a href="/">ipsum dolor sit amet</a>, consetetur sadipscing elitr, sed
+                    diam nonumy eirmod tempor invidunt
+                    <strong>ut labore et dolore</strong> magna aliquyam erat, sed
+                    diam voluptua.
+                </p>
+                <p class="links">
+                    <a class="button btn-primary" href="/">contact us</a>
+                    <a class="button btn-secondary" href="/">more info</a>
+                </p>
+            </section>
+        </main>
+    </body>
+</html>
+<style is:global>
+    :root {
+        --color-light: white;
+        --color-dark: #2e354f;
+        --color-accent: #ef5839;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .light {
+        color: var(--color-dark);
+        background-color: var(--color-light);
+    }
+    .dark {
+        color: var(--color-light);
+        background-color: var(--color-dark);
+    }
+    h2,
+    a {
+        color: var(--color-accent);
+    }
+    h1,
+    h2,
+    strong {
+        font-weight: 900;
+    }
+    h1 {
+        font-size: 2.25rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    body {
+        margin: 0;
+        font-size: 1.125rem;
+    }
+    main {
+        width: 100%;
+        margin: 0;
+    }
+    .flow {
+        padding: 2rem;
+        margin: 0 auto;
+        max-width: 620px;
+    }
+    .flow > img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .flow > * {
+        margin-block: 0;
+    }
+
+    .flow > * + * {
+        margin-block-start: 1em;
+    }
+
+    .flow > .links {
+        margin-block-start: 3em;
+    }
+
+    a {
+        font-weight: 500;
+    }
+    a:hover {
+        color: var(--color-secondary);
+    }
+    .links {
+        display: flex;
+        gap: 1em;
+    }
+    .button {
+        display: inline-block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        border-radius: 0.25em;
+        text-align: center;
+        cursor: pointer;
+    }
+    .btn-primary {
+        background-color: var(--color-accent);
+        color: var(--color-light);
+    }
+    .btn-secondary {
+        background-color: var(--color-light);
+        color: var(--color-dark);
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: var(--color-light);
+        color: var(--color-accent);
+    }
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+        background-color: var(--color-accent);
+        color: var(--color-light);
+    }
+</style>
