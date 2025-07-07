@@ -17,17 +17,19 @@
     </head>
     <body>
         <header>
-            <hgroup class="site-title">
-                <h1>Living the social life</h1>
-                <p class="subtitle">A blog exploring minimalism in life</p>
-            </hgroup>
-            <nav>
-                <ul>
-                    <li><a href="#" class="current-page">Home</a></li>
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Recent posts</a></li>
-                </ul>
-            </nav>
+            <div class="container">
+                <hgroup class="site-title">
+                    <h1>Living the social life</h1>
+                    <p class="subtitle">A blog exploring minimalism in life</p>
+                </hgroup>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="current-page">Home</a></li>
+                        <li><a href="#">About me</a></li>
+                        <li><a href="#">Recent posts</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
     </body>
 </html>
@@ -64,7 +66,6 @@
     }
     nav {
         color: var(--color-gray);
-        margin-block: 1em;
     }
     nav ul {
         list-style: none;
@@ -94,5 +95,26 @@
     .current-page:focus {
         color: inherit;
         text-decoration: none;
+    }
+    .container {
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+        @media (max-width: 768px) {
+            & {
+                flex-direction: column;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5em;
+            }
+        }
     }
 </style>
