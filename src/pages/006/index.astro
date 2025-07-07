@@ -33,14 +33,38 @@
 </html>
 <style is:global>
     :root {
-    --color-dark: #143774;
-    --color-light: #f8f8f8;
-    --color-gray: #707070;
-    --color-accent: #1792d2;
-    font-family: 'Inter', sans-serif;   
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--color-dark);
-    background-color: var(--color-light);
-}
+        --color-dark: #143774;
+        --color-light: #f8f8f8;
+        --color-gray: #707070;
+        --color-accent: #1792d2;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: var(--color-dark);
+        background-color: var(--color-light);
+    }
+    header {
+        text-align: center;
+    }
+    .site-title {
+        margin-bottom: 0;
+    }
+    .subtitle {
+        font-size: 0.75em;
+    } 
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        padding: 0;
+    }
+    nav a {
+        color: var(--color-accent);
+        text-decoration: none;
+    }
+    nav a:hover,
+    nav a:focus {
+        text-decoration: underline;
+    }
 </style>
